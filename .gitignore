@@ -587,8 +587,6 @@ FodyWeavers.xsd
 
 # Windows Installer files from build outputs
 
-# JetBrains Rider
-
 ### VisualStudio Patch ###
 # Additional files built by Visual Studio
 
