@@ -10,4 +10,31 @@ while (!Directory.Exists(path))
 Console.WriteLine("-------------------------------------------------------------------\n");
 Console.WriteLine("Directorio elegido:");
 Console.WriteLine(path + "\n");
-Console.WriteLine("-------------------------------------------------------------------");
+Console.WriteLine("-------------------------------------------------------------------\n");
+
+//Listado de los directorios encontrados en la ruta especificada
+
+string[] carpetas;
+carpetas = Directory.GetDirectories(path);
+Console.WriteLine("--------------------------Directorios encontrados: ");
+
+foreach (var dir in carpetas)
+{
+    Console.WriteLine(dir);
+}
+
+string[] archivos;
+archivos = Directory.GetFiles(path);
+Console.WriteLine("\n--------------------------Archivos encontrados: ");
+
+foreach (var file in archivos)
+{
+    var Info = new FileInfo(file);
+    var kilobytes = Info.Length;
+    Console.WriteLine(file + "// tamaño: " + kilobytes + " Kb");
+}
+
+
+//var a = new FileInfo("c:\\");
+//a.
+
