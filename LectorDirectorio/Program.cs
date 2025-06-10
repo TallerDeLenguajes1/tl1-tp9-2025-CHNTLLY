@@ -30,8 +30,9 @@ Console.WriteLine("\n--------------------------Archivos encontrados: ");
 foreach (var file in archivos)
 {
     var Info = new FileInfo(file);
-    var kilobytes = Info.Length;
-    Console.WriteLine(file + "// tamaño: " + kilobytes + " Kb");
+    var Bytes = Info.Length;
+    var nombre = Path.GetFileName(file);
+    Console.WriteLine(nombre + "// tamaño: " + Bytes/1024 + " Kb");
 }
 
 
